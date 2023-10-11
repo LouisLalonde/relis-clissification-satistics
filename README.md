@@ -10,6 +10,8 @@ based on their *ReLiS* project classification data and metadata.
 
 **Primary authors:** Louis Lalonde [@louislalonde](https://github.com/LouisLalonde) and Hanz Schepens
 
-### Supported statistics
+### Supported analytical functions
+
+@TO-DO
 
 
