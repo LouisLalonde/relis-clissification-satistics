@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: relisTextual
+Bundle-ManifestVersion: 2
+Bundle-Name: relisTextual
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: relisTextual; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: Relis,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.16.0",
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: geodes.sms.relis.validation,
+ geodes.sms.relis.generator,
+ geodes.sms.relis.serializer,
+ geodes.sms.relis.parser.antlr.internal,
+ geodes.sms.relis.parser.antlr,
+ geodes.sms.relis.services,
+ geodes.sms.relis.scoping,
+ geodes.sms.relis,
+ geodes.sms.relis.formatting2
+Import-Package: org.apache.log4j

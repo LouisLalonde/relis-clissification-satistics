@@ -12,6 +12,7 @@ Scope nominal {
 }
 
 Question: est-ce que notre DSL a accès aux variables de classifications du projet donné ?
+Reponse(?): Je crois qu'il faudrait faire un mixin de notre DSL et celle de Relis pour y avoir accès directement.
 
 R stats exportation: http://localhost:8083/user/help_det/20
 ReLIS data extraction: https://relis.iro.umontreal.ca/auth/help_det/13
