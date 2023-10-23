@@ -9,8 +9,22 @@ These protocol models are then used to automatically generate Python code. When 
 
 **Primary authors:** Louis Lalonde [@louislalonde](https://github.com/LouisLalonde) and Hanz Schepens [@Wickkawizz](https://github.com/Wickkawizz)
 
-### Supported analytical functions
+### Supported analytical function by categories
 
-@TO-DO
-
-
+| Statistics category | Name | Variable type | Description | Migrated to Python |
+|----|----|----|----|----|
+| ``Descriptive`` | Frequency tables | Nominal | | No |
+| `Descriptive` | Bar plots | Nominal | | No |
+| `Descriptive` | Statistics | Continuous | | No |
+| `Descriptive` | Box plots | Continuous | | No |
+| `Descriptive` | Violin plots | Continuous | | No |
+| `Evolution` | Frequency tables | Nominal | | No |
+| `Evolution` | Evolution plots | Nominal | | No |
+| ``Comparative`` | Frequency tables | Nominal | | No |
+| `Comparative` | Stacked bar plots | Nominal | | No |
+| `Comparative` | Grouped bar plots | Nominal | | No |
+| `Comparative` | Bubble charts | Nominal | | No |
+| `Comparative` | Fisher's exact test | Nominal | | No |
+| `Comparative` | Shapiro Wilk's correlation test | Continuous | | No |
+| `Comparative` | Pearson's correlation test | Continuous | | No |
+| `Comparative` | Spearman's correlation test | Continuous | | No |
