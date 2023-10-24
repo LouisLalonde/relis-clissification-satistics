@@ -9,7 +9,7 @@ These protocol models are then used to automatically generate Python code. When 
 
 **Primary authors:** Louis Lalonde [@louislalonde](https://github.com/LouisLalonde) and Hanz Schepens [@Wickkawizz](https://github.com/Wickkawizz)
 
-## 🚀 *ReLIS* classification statistics DSL roadmap 
+## 🚀 *ReLIS* statistical classification DSL roadmap 
 - [x] DSL metamodel with ecore
 - [ ] DSL grammar with xtext
 - [ ] DSL *ReLIS* project classification variables injector
