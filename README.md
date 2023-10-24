@@ -1,6 +1,6 @@
 # relis-classification-satistics
 
-### Overview
+## Overview
 
 This repository extends the basic statistical classification capabilities of *ReLiS*: a tool for conducting systematic reviews, develop by the [GEODES](https://geodes.iro.umontreal.ca/) software engineering group at the [University of Montreal](https://www.umontreal.ca/en/).
 
@@ -9,7 +9,14 @@ These protocol models are then used to automatically generate Python code. When 
 
 **Primary authors:** Louis Lalonde [@louislalonde](https://github.com/LouisLalonde) and Hanz Schepens [@Wickkawizz](https://github.com/Wickkawizz)
 
-### Supported analytical function by categories
+## 🚀 *ReLIS* classification statistics DSL roadmap 
+- [x] DSL metamodel with ecore
+- [ ] DSL grammar with xtext
+- [ ] DSL *ReLIS* project classification variables injector
+- [ ] R statisctics functions migration to Python
+- [ ] DSL statistics code generation to python with xtend
+
+## 📜 Supported analytical function by categories
 
 | Statistics category | Name | Variable type | Description | Migrated to Python |
 |----|----|----|----|----|
