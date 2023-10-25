@@ -4,8 +4,8 @@
 		lapply(packgs, library, character.only=TRUE)
 		
 		# Importing data.csv
-		relis_data <- read.csv("relis_classification_CV.csv", header = TRUE) # Replace this with the name of your imported data file
-		rm(relis_classification_CV)           # Replace this with the name of your imported data file
+		relis_data <- read.csv("../data/relis_classification_CV.csv", header = TRUE) # Replace this with the name of your imported data file
+		# rm(relis_classification_CV)           # Replace this with the name of your imported data file
 		config_file <- data.frame(Column_name = c("Transformation.name","Domain","Transformation.Language","Source.language","Target.language","Scope","Industrial","Bidirectional","Targeted.year","Note","Publication.year","Venue","Search.Type") , 
 		Scale = c("Text","Nominal","Nominal","Nominal","Nominal","Nominal","Nominal","Nominal","Continuous","Text","Continuous","Nominal","Nominal")) 
 		# Beautifying Title
@@ -94,6 +94,7 @@
 		  bar_plot_vector[[nominal_df$Column_name[i]]] <- generate_bar_plot(relis_data, nominal_df, i)
 			
 		}
+
 		###############################################################################################
 		# Initialize lists to store frequency tables and plots for continuous data
 		statistics_vector <- list()
@@ -243,7 +244,6 @@
 		# Function to conduct Shapiro Wilk's test
 		shapiro_wilk_test <- function(data, config_file, i) {
 		  subset_data <- data[[config_file$Column_name[i]]]
-		  
 		  shapiro_result <- shapiro.test(subset_data)
 		  
 		  return(shapiro_result)
