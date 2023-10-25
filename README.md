@@ -1,4 +1,4 @@
-# relis-classification-satistics
+# relis-statistical-classification
 
 ## Overview
 
