@@ -5,15 +5,15 @@ source('relis_r_lib_CV.R') # Replace this with the name of your imported library
 # Descriptive statistics
 
 # Frequency tables~Descriptive stats(Nominal variables)
-# desc_distr_vector[['Domain']]
-# desc_distr_vector[['Transformation.Language']]
-# desc_distr_vector[['Source.language']]
-# desc_distr_vector[['Target.language']]
-# desc_distr_vector[['Scope']]
-# desc_distr_vector[['Industrial']]
-# desc_distr_vector[['Bidirectional']]
-# desc_distr_vector[['Venue']]
-# desc_distr_vector[['Search.Type']]
+desc_distr_vector[['Domain']]
+desc_distr_vector[['Transformation.Language']]
+desc_distr_vector[['Source.language']]
+desc_distr_vector[['Target.language']]
+desc_distr_vector[['Scope']]
+desc_distr_vector[['Industrial']]
+desc_distr_vector[['Bidirectional']]
+desc_distr_vector[['Venue']]
+desc_distr_vector[['Search.Type']]
 
 # Bar Plots~Descriptive stats(Nominal variables)
 # bar_plot_vector[['Domain']]
@@ -53,16 +53,16 @@ source('relis_r_lib_CV.R') # Replace this with the name of your imported library
 # evo_distr_vector[['Venue']]
 # evo_distr_vector[['Search.Type']]
 
-# Evolution Plots~Evolution stats(Nominal variables)
-# evolution_plot_vector[['Domain']]
-# evolution_plot_vector[['Transformation.Language']]
-# evolution_plot_vector[['Source.language']]
-# evolution_plot_vector[['Target.language']]
-# evolution_plot_vector[['Scope']]
-# evolution_plot_vector[['Industrial']]
-# evolution_plot_vector[['Bidirectional']]
-# evolution_plot_vector[['Venue']]
-# evolution_plot_vector[['Search.Type']]
+#Evolution Plots~Evolution stats(Nominal variables)
+evolution_plot_vector[['Domain']]
+evolution_plot_vector[['Transformation.Language']]
+evolution_plot_vector[['Source.language']]
+evolution_plot_vector[['Target.language']]
+evolution_plot_vector[['Scope']]
+evolution_plot_vector[['Industrial']]
+evolution_plot_vector[['Bidirectional']]
+evolution_plot_vector[['Venue']]
+evolution_plot_vector[['Search.Type']]
 
 #######################################################################################
 
