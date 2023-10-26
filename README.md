@@ -16,7 +16,7 @@ These protocol models are then used to automatically generate Python code. When 
 - [ ] R statisctics functions migration to Python
 - [ ] DSL statistics code generation to python with xtend
 
-## 📜 Supported analytical function by categories
+## 📜 Supported statistical function by categories
 
 | Statistics category | Name | Variable type | Description | Migrated to Python |
 |----|----|----|----|----|
