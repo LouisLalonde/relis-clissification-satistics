@@ -6,6 +6,7 @@ package Relis.validation;
 
 import Relis.Statistic;
 
+import Relis.Type;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -19,4 +20,6 @@ public interface VariableValidator {
 
 	boolean validateStatistic(EList<Statistic> value);
 	boolean validateName(String value);
+
+	boolean validateType(Type value);
 }

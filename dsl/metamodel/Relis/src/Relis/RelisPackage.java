@@ -113,22 +113,13 @@ public interface RelisPackage extends EPackage {
 	int STATISTIC__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATISTIC__TYPE = 1;
-
-	/**
 	 * The number of structural features of the '<em>Statistic</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATISTIC_FEATURE_COUNT = 2;
+	int STATISTIC_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link Relis.impl.DescriptiveImpl <em>Descriptive</em>}' class.
@@ -150,13 +141,13 @@ public interface RelisPackage extends EPackage {
 	int DESCRIPTIVE__NAME = STATISTIC__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Stats</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DESCRIPTIVE__TYPE = STATISTIC__TYPE;
+	int DESCRIPTIVE__STATS = STATISTIC_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Descriptive</em>' class.
@@ -165,7 +156,7 @@ public interface RelisPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DESCRIPTIVE_FEATURE_COUNT = STATISTIC_FEATURE_COUNT + 0;
+	int DESCRIPTIVE_FEATURE_COUNT = STATISTIC_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link Relis.impl.ComparativeImpl <em>Comparative</em>}' class.
@@ -187,13 +178,13 @@ public interface RelisPackage extends EPackage {
 	int COMPARATIVE__NAME = STATISTIC__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Stats</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPARATIVE__TYPE = STATISTIC__TYPE;
+	int COMPARATIVE__STATS = STATISTIC_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Comparative</em>' class.
@@ -202,7 +193,7 @@ public interface RelisPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPARATIVE_FEATURE_COUNT = STATISTIC_FEATURE_COUNT + 0;
+	int COMPARATIVE_FEATURE_COUNT = STATISTIC_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link Relis.impl.EvolutionImpl <em>Evolution</em>}' class.
@@ -224,13 +215,13 @@ public interface RelisPackage extends EPackage {
 	int EVOLUTION__NAME = STATISTIC__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Stats</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVOLUTION__TYPE = STATISTIC__TYPE;
+	int EVOLUTION__STATS = STATISTIC_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Evolution</em>' class.
@@ -239,7 +230,7 @@ public interface RelisPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVOLUTION_FEATURE_COUNT = STATISTIC_FEATURE_COUNT + 0;
+	int EVOLUTION_FEATURE_COUNT = STATISTIC_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link Relis.impl.VariableImpl <em>Variable</em>}' class.
@@ -270,13 +261,22 @@ public interface RelisPackage extends EPackage {
 	int VARIABLE__NAME = 1;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__TYPE = 2;
+
+	/**
 	 * The number of structural features of the '<em>Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_FEATURE_COUNT = 2;
+	int VARIABLE_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link Relis.Type <em>Type</em>}' enum.
@@ -287,6 +287,37 @@ public interface RelisPackage extends EPackage {
 	 * @generated
 	 */
 	int TYPE = 6;
+
+
+	/**
+	 * The meta object id for the '{@link Relis.CompStats <em>Comp Stats</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Relis.CompStats
+	 * @see Relis.impl.RelisPackageImpl#getCompStats()
+	 * @generated
+	 */
+	int COMP_STATS = 7;
+
+	/**
+	 * The meta object id for the '{@link Relis.EvoStats <em>Evo Stats</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Relis.EvoStats
+	 * @see Relis.impl.RelisPackageImpl#getEvoStats()
+	 * @generated
+	 */
+	int EVO_STATS = 8;
+
+	/**
+	 * The meta object id for the '{@link Relis.DescStats <em>Desc Stats</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Relis.DescStats
+	 * @see Relis.impl.RelisPackageImpl#getDescStats()
+	 * @generated
+	 */
+	int DESC_STATS = 9;
 
 
 	/**
@@ -343,17 +374,6 @@ public interface RelisPackage extends EPackage {
 	EAttribute getStatistic_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Relis.Statistic#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see Relis.Statistic#getType()
-	 * @see #getStatistic()
-	 * @generated
-	 */
-	EAttribute getStatistic_Type();
-
-	/**
 	 * Returns the meta object for class '{@link Relis.Descriptive <em>Descriptive</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -362,6 +382,17 @@ public interface RelisPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDescriptive();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link Relis.Descriptive#getStats <em>Stats</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Stats</em>'.
+	 * @see Relis.Descriptive#getStats()
+	 * @see #getDescriptive()
+	 * @generated
+	 */
+	EAttribute getDescriptive_Stats();
 
 	/**
 	 * Returns the meta object for class '{@link Relis.Comparative <em>Comparative</em>}'.
@@ -374,6 +405,17 @@ public interface RelisPackage extends EPackage {
 	EClass getComparative();
 
 	/**
+	 * Returns the meta object for the attribute list '{@link Relis.Comparative#getStats <em>Stats</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Stats</em>'.
+	 * @see Relis.Comparative#getStats()
+	 * @see #getComparative()
+	 * @generated
+	 */
+	EAttribute getComparative_Stats();
+
+	/**
 	 * Returns the meta object for class '{@link Relis.Evolution <em>Evolution</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -382,6 +424,17 @@ public interface RelisPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEvolution();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link Relis.Evolution#getStats <em>Stats</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Stats</em>'.
+	 * @see Relis.Evolution#getStats()
+	 * @see #getEvolution()
+	 * @generated
+	 */
+	EAttribute getEvolution_Stats();
 
 	/**
 	 * Returns the meta object for class '{@link Relis.Variable <em>Variable</em>}'.
@@ -416,6 +469,17 @@ public interface RelisPackage extends EPackage {
 	EAttribute getVariable_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link Relis.Variable#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see Relis.Variable#getType()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EAttribute getVariable_Type();
+
+	/**
 	 * Returns the meta object for enum '{@link Relis.Type <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -424,6 +488,36 @@ public interface RelisPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getType();
+
+	/**
+	 * Returns the meta object for enum '{@link Relis.CompStats <em>Comp Stats</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Comp Stats</em>'.
+	 * @see Relis.CompStats
+	 * @generated
+	 */
+	EEnum getCompStats();
+
+	/**
+	 * Returns the meta object for enum '{@link Relis.EvoStats <em>Evo Stats</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Evo Stats</em>'.
+	 * @see Relis.EvoStats
+	 * @generated
+	 */
+	EEnum getEvoStats();
+
+	/**
+	 * Returns the meta object for enum '{@link Relis.DescStats <em>Desc Stats</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Desc Stats</em>'.
+	 * @see Relis.DescStats
+	 * @generated
+	 */
+	EEnum getDescStats();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -492,14 +586,6 @@ public interface RelisPackage extends EPackage {
 		EAttribute STATISTIC__NAME = eINSTANCE.getStatistic_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute STATISTIC__TYPE = eINSTANCE.getStatistic_Type();
-
-		/**
 		 * The meta object literal for the '{@link Relis.impl.DescriptiveImpl <em>Descriptive</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -508,6 +594,14 @@ public interface RelisPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DESCRIPTIVE = eINSTANCE.getDescriptive();
+
+		/**
+		 * The meta object literal for the '<em><b>Stats</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DESCRIPTIVE__STATS = eINSTANCE.getDescriptive_Stats();
 
 		/**
 		 * The meta object literal for the '{@link Relis.impl.ComparativeImpl <em>Comparative</em>}' class.
@@ -520,6 +614,14 @@ public interface RelisPackage extends EPackage {
 		EClass COMPARATIVE = eINSTANCE.getComparative();
 
 		/**
+		 * The meta object literal for the '<em><b>Stats</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPARATIVE__STATS = eINSTANCE.getComparative_Stats();
+
+		/**
 		 * The meta object literal for the '{@link Relis.impl.EvolutionImpl <em>Evolution</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -528,6 +630,14 @@ public interface RelisPackage extends EPackage {
 		 * @generated
 		 */
 		EClass EVOLUTION = eINSTANCE.getEvolution();
+
+		/**
+		 * The meta object literal for the '<em><b>Stats</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EVOLUTION__STATS = eINSTANCE.getEvolution_Stats();
 
 		/**
 		 * The meta object literal for the '{@link Relis.impl.VariableImpl <em>Variable</em>}' class.
@@ -556,6 +666,14 @@ public interface RelisPackage extends EPackage {
 		EAttribute VARIABLE__NAME = eINSTANCE.getVariable_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VARIABLE__TYPE = eINSTANCE.getVariable_Type();
+
+		/**
 		 * The meta object literal for the '{@link Relis.Type <em>Type</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -564,6 +682,36 @@ public interface RelisPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum TYPE = eINSTANCE.getType();
+
+		/**
+		 * The meta object literal for the '{@link Relis.CompStats <em>Comp Stats</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Relis.CompStats
+		 * @see Relis.impl.RelisPackageImpl#getCompStats()
+		 * @generated
+		 */
+		EEnum COMP_STATS = eINSTANCE.getCompStats();
+
+		/**
+		 * The meta object literal for the '{@link Relis.EvoStats <em>Evo Stats</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Relis.EvoStats
+		 * @see Relis.impl.RelisPackageImpl#getEvoStats()
+		 * @generated
+		 */
+		EEnum EVO_STATS = eINSTANCE.getEvoStats();
+
+		/**
+		 * The meta object literal for the '{@link Relis.DescStats <em>Desc Stats</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Relis.DescStats
+		 * @see Relis.impl.RelisPackageImpl#getDescStats()
+		 * @generated
+		 */
+		EEnum DESC_STATS = eINSTANCE.getDescStats();
 
 	}
 

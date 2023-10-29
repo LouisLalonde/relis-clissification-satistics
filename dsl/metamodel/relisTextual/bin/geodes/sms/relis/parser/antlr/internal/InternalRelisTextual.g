@@ -84,9 +84,9 @@ ruleRelisRoot returns [EObject current=null]
 					$current);
 			}
 		)
-		otherlv_1='RelisRoot'
+		otherlv_1='RelisClassificationStatistic'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getRelisRootAccess().getRelisRootKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getRelisRootAccess().getRelisClassificationStatisticKeyword_1());
 		}
 		(
 			(
@@ -112,20 +112,12 @@ ruleRelisRoot returns [EObject current=null]
 			newLeafNode(otherlv_3, grammarAccess.getRelisRootAccess().getLeftCurlyBracketKeyword_3());
 		}
 		(
-			otherlv_4='variable'
-			{
-				newLeafNode(otherlv_4, grammarAccess.getRelisRootAccess().getVariableKeyword_4_0());
-			}
-			otherlv_5='{'
-			{
-				newLeafNode(otherlv_5, grammarAccess.getRelisRootAccess().getLeftCurlyBracketKeyword_4_1());
-			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getRelisRootAccess().getVariableVariableParserRuleCall_4_2_0());
+						newCompositeNode(grammarAccess.getRelisRootAccess().getVariableVariableParserRuleCall_4_0_0());
 					}
-					lv_variable_6_0=ruleVariable
+					lv_variable_4_0=ruleVariable
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getRelisRootRule());
@@ -133,45 +125,35 @@ ruleRelisRoot returns [EObject current=null]
 						add(
 							$current,
 							"variable",
-							lv_variable_6_0,
+							lv_variable_4_0,
 							"geodes.sms.relis.RelisTextual.Variable");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_7=','
-				{
-					newLeafNode(otherlv_7, grammarAccess.getRelisRootAccess().getCommaKeyword_4_3_0());
-				}
 				(
-					(
-						{
-							newCompositeNode(grammarAccess.getRelisRootAccess().getVariableVariableParserRuleCall_4_3_1_0());
+					{
+						newCompositeNode(grammarAccess.getRelisRootAccess().getVariableVariableParserRuleCall_4_1_0());
+					}
+					lv_variable_5_0=ruleVariable
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getRelisRootRule());
 						}
-						lv_variable_8_0=ruleVariable
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getRelisRootRule());
-							}
-							add(
-								$current,
-								"variable",
-								lv_variable_8_0,
-								"geodes.sms.relis.RelisTextual.Variable");
-							afterParserOrEnumRuleCall();
-						}
-					)
+						add(
+							$current,
+							"variable",
+							lv_variable_5_0,
+							"geodes.sms.relis.RelisTextual.Variable");
+						afterParserOrEnumRuleCall();
+					}
 				)
 			)*
-			otherlv_9='}'
-			{
-				newLeafNode(otherlv_9, grammarAccess.getRelisRootAccess().getRightCurlyBracketKeyword_4_4());
-			}
 		)?
-		otherlv_10='}'
+		otherlv_6='}'
 		{
-			newLeafNode(otherlv_10, grammarAccess.getRelisRootAccess().getRightCurlyBracketKeyword_5());
+			newLeafNode(otherlv_6, grammarAccess.getRelisRootAccess().getRightCurlyBracketKeyword_5());
 		}
 	)
 ;
@@ -267,25 +249,36 @@ ruleVariable returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3='{'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVariableAccess().getTypeTypeEnumRuleCall_3_0());
+				}
+				lv_type_3_0=ruleType
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVariableRule());
+					}
+					set(
+						$current,
+						"type",
+						lv_type_3_0,
+						"geodes.sms.relis.RelisTextual.Type");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_4='{'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVariableAccess().getLeftCurlyBracketKeyword_3());
+			newLeafNode(otherlv_4, grammarAccess.getVariableAccess().getLeftCurlyBracketKeyword_4());
 		}
 		(
-			otherlv_4='statistic'
-			{
-				newLeafNode(otherlv_4, grammarAccess.getVariableAccess().getStatisticKeyword_4_0());
-			}
-			otherlv_5='{'
-			{
-				newLeafNode(otherlv_5, grammarAccess.getVariableAccess().getLeftCurlyBracketKeyword_4_1());
-			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getVariableAccess().getStatisticStatisticParserRuleCall_4_2_0());
+						newCompositeNode(grammarAccess.getVariableAccess().getStatisticStatisticParserRuleCall_5_0_0());
 					}
-					lv_statistic_6_0=ruleStatistic
+					lv_statistic_5_0=ruleStatistic
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getVariableRule());
@@ -293,23 +286,23 @@ ruleVariable returns [EObject current=null]
 						add(
 							$current,
 							"statistic",
-							lv_statistic_6_0,
+							lv_statistic_5_0,
 							"geodes.sms.relis.RelisTextual.Statistic");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_7=','
+				otherlv_6=';'
 				{
-					newLeafNode(otherlv_7, grammarAccess.getVariableAccess().getCommaKeyword_4_3_0());
+					newLeafNode(otherlv_6, grammarAccess.getVariableAccess().getSemicolonKeyword_5_1_0());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getVariableAccess().getStatisticStatisticParserRuleCall_4_3_1_0());
+							newCompositeNode(grammarAccess.getVariableAccess().getStatisticStatisticParserRuleCall_5_1_1_0());
 						}
-						lv_statistic_8_0=ruleStatistic
+						lv_statistic_7_0=ruleStatistic
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getVariableRule());
@@ -317,21 +310,17 @@ ruleVariable returns [EObject current=null]
 							add(
 								$current,
 								"statistic",
-								lv_statistic_8_0,
+								lv_statistic_7_0,
 								"geodes.sms.relis.RelisTextual.Statistic");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-			otherlv_9='}'
-			{
-				newLeafNode(otherlv_9, grammarAccess.getVariableAccess().getRightCurlyBracketKeyword_4_4());
-			}
 		)?
-		otherlv_10='}'
+		otherlv_8='}'
 		{
-			newLeafNode(otherlv_10, grammarAccess.getVariableAccess().getRightCurlyBracketKeyword_5());
+			newLeafNode(otherlv_8, grammarAccess.getVariableAccess().getRightCurlyBracketKeyword_6());
 		}
 	)
 ;
@@ -397,58 +386,56 @@ ruleDescriptive returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getDescriptiveAccess().getDescriptiveKeyword_1());
 		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getDescriptiveAccess().getNameEStringParserRuleCall_2_0());
-				}
-				lv_name_2_0=ruleEString
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getDescriptiveRule());
-					}
-					set(
-						$current,
-						"name",
-						lv_name_2_0,
-						"geodes.sms.relis.RelisTextual.EString");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_3='{'
+		otherlv_2=':'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getDescriptiveAccess().getLeftCurlyBracketKeyword_3());
+			newLeafNode(otherlv_2, grammarAccess.getDescriptiveAccess().getColonKeyword_2());
 		}
 		(
-			otherlv_4='type'
-			{
-				newLeafNode(otherlv_4, grammarAccess.getDescriptiveAccess().getTypeKeyword_4_0());
-			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getDescriptiveAccess().getTypeTypeEnumRuleCall_4_1_0());
+						newCompositeNode(grammarAccess.getDescriptiveAccess().getStatsDescStatsEnumRuleCall_3_0_0());
 					}
-					lv_type_5_0=ruleType
+					lv_stats_3_0=ruleDescStats
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getDescriptiveRule());
 						}
-						set(
+						add(
 							$current,
-							"type",
-							lv_type_5_0,
-							"geodes.sms.relis.RelisTextual.Type");
+							"stats",
+							lv_stats_3_0,
+							"geodes.sms.relis.RelisTextual.DescStats");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
+			(
+				otherlv_4=','
+				{
+					newLeafNode(otherlv_4, grammarAccess.getDescriptiveAccess().getCommaKeyword_3_1_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getDescriptiveAccess().getStatsDescStatsEnumRuleCall_3_1_1_0());
+						}
+						lv_stats_5_0=ruleDescStats
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getDescriptiveRule());
+							}
+							add(
+								$current,
+								"stats",
+								lv_stats_5_0,
+								"geodes.sms.relis.RelisTextual.DescStats");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+			)*
 		)?
-		otherlv_6='}'
-		{
-			newLeafNode(otherlv_6, grammarAccess.getDescriptiveAccess().getRightCurlyBracketKeyword_5());
-		}
 	)
 ;
 
@@ -479,58 +466,56 @@ ruleComparative returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getComparativeAccess().getComparativeKeyword_1());
 		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getComparativeAccess().getNameEStringParserRuleCall_2_0());
-				}
-				lv_name_2_0=ruleEString
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getComparativeRule());
-					}
-					set(
-						$current,
-						"name",
-						lv_name_2_0,
-						"geodes.sms.relis.RelisTextual.EString");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_3='{'
+		otherlv_2=':'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getComparativeAccess().getLeftCurlyBracketKeyword_3());
+			newLeafNode(otherlv_2, grammarAccess.getComparativeAccess().getColonKeyword_2());
 		}
 		(
-			otherlv_4='type'
-			{
-				newLeafNode(otherlv_4, grammarAccess.getComparativeAccess().getTypeKeyword_4_0());
-			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getComparativeAccess().getTypeTypeEnumRuleCall_4_1_0());
+						newCompositeNode(grammarAccess.getComparativeAccess().getStatsCompStatsEnumRuleCall_3_0_0());
 					}
-					lv_type_5_0=ruleType
+					lv_stats_3_0=ruleCompStats
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getComparativeRule());
 						}
-						set(
+						add(
 							$current,
-							"type",
-							lv_type_5_0,
-							"geodes.sms.relis.RelisTextual.Type");
+							"stats",
+							lv_stats_3_0,
+							"geodes.sms.relis.RelisTextual.CompStats");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
+			(
+				otherlv_4=','
+				{
+					newLeafNode(otherlv_4, grammarAccess.getComparativeAccess().getCommaKeyword_3_1_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getComparativeAccess().getStatsCompStatsEnumRuleCall_3_1_1_0());
+						}
+						lv_stats_5_0=ruleCompStats
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getComparativeRule());
+							}
+							add(
+								$current,
+								"stats",
+								lv_stats_5_0,
+								"geodes.sms.relis.RelisTextual.CompStats");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+			)*
 		)?
-		otherlv_6='}'
-		{
-			newLeafNode(otherlv_6, grammarAccess.getComparativeAccess().getRightCurlyBracketKeyword_5());
-		}
 	)
 ;
 
@@ -561,58 +546,56 @@ ruleEvolution returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getEvolutionAccess().getEvolutionKeyword_1());
 		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getEvolutionAccess().getNameEStringParserRuleCall_2_0());
-				}
-				lv_name_2_0=ruleEString
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getEvolutionRule());
-					}
-					set(
-						$current,
-						"name",
-						lv_name_2_0,
-						"geodes.sms.relis.RelisTextual.EString");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_3='{'
+		otherlv_2=':'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getEvolutionAccess().getLeftCurlyBracketKeyword_3());
+			newLeafNode(otherlv_2, grammarAccess.getEvolutionAccess().getColonKeyword_2());
 		}
 		(
-			otherlv_4='type'
-			{
-				newLeafNode(otherlv_4, grammarAccess.getEvolutionAccess().getTypeKeyword_4_0());
-			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getEvolutionAccess().getTypeTypeEnumRuleCall_4_1_0());
+						newCompositeNode(grammarAccess.getEvolutionAccess().getStatsEvoStatsEnumRuleCall_3_0_0());
 					}
-					lv_type_5_0=ruleType
+					lv_stats_3_0=ruleEvoStats
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEvolutionRule());
 						}
-						set(
+						add(
 							$current,
-							"type",
-							lv_type_5_0,
-							"geodes.sms.relis.RelisTextual.Type");
+							"stats",
+							lv_stats_3_0,
+							"geodes.sms.relis.RelisTextual.EvoStats");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
+			(
+				otherlv_4=','
+				{
+					newLeafNode(otherlv_4, grammarAccess.getEvolutionAccess().getCommaKeyword_3_1_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getEvolutionAccess().getStatsEvoStatsEnumRuleCall_3_1_1_0());
+						}
+						lv_stats_5_0=ruleEvoStats
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getEvolutionRule());
+							}
+							add(
+								$current,
+								"stats",
+								lv_stats_5_0,
+								"geodes.sms.relis.RelisTextual.EvoStats");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+			)*
 		)?
-		otherlv_6='}'
-		{
-			newLeafNode(otherlv_6, grammarAccess.getEvolutionAccess().getRightCurlyBracketKeyword_5());
-		}
 	)
 ;
 
@@ -646,6 +629,159 @@ ruleType returns [Enumerator current=null]
 			{
 				$current = grammarAccess.getTypeAccess().getComparativeEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_2, grammarAccess.getTypeAccess().getComparativeEnumLiteralDeclaration_2());
+			}
+		)
+	)
+;
+
+// Rule DescStats
+ruleDescStats returns [Enumerator current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			enumLiteral_0='Frequency_tables'
+			{
+				$current = grammarAccess.getDescStatsAccess().getFrequency_tablesEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getDescStatsAccess().getFrequency_tablesEnumLiteralDeclaration_0());
+			}
+		)
+		    |
+		(
+			enumLiteral_1='Bar_plots'
+			{
+				$current = grammarAccess.getDescStatsAccess().getBar_plotsEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getDescStatsAccess().getBar_plotsEnumLiteralDeclaration_1());
+			}
+		)
+		    |
+		(
+			enumLiteral_2='Statistics'
+			{
+				$current = grammarAccess.getDescStatsAccess().getStatisticsEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_2, grammarAccess.getDescStatsAccess().getStatisticsEnumLiteralDeclaration_2());
+			}
+		)
+		    |
+		(
+			enumLiteral_3='Box_plots'
+			{
+				$current = grammarAccess.getDescStatsAccess().getBox_plotsEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_3, grammarAccess.getDescStatsAccess().getBox_plotsEnumLiteralDeclaration_3());
+			}
+		)
+		    |
+		(
+			enumLiteral_4='Violin_plots'
+			{
+				$current = grammarAccess.getDescStatsAccess().getViolin_plotsEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_4, grammarAccess.getDescStatsAccess().getViolin_plotsEnumLiteralDeclaration_4());
+			}
+		)
+	)
+;
+
+// Rule CompStats
+ruleCompStats returns [Enumerator current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			enumLiteral_0='Frequency_tables'
+			{
+				$current = grammarAccess.getCompStatsAccess().getFrequency_tablesEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getCompStatsAccess().getFrequency_tablesEnumLiteralDeclaration_0());
+			}
+		)
+		    |
+		(
+			enumLiteral_1='Stacked_bar_plots'
+			{
+				$current = grammarAccess.getCompStatsAccess().getStacked_bar_plotsEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getCompStatsAccess().getStacked_bar_plotsEnumLiteralDeclaration_1());
+			}
+		)
+		    |
+		(
+			enumLiteral_2='Grouped_bar_plots'
+			{
+				$current = grammarAccess.getCompStatsAccess().getGrouped_bar_plotsEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_2, grammarAccess.getCompStatsAccess().getGrouped_bar_plotsEnumLiteralDeclaration_2());
+			}
+		)
+		    |
+		(
+			enumLiteral_3='Bubble_charts'
+			{
+				$current = grammarAccess.getCompStatsAccess().getBubble_chartsEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_3, grammarAccess.getCompStatsAccess().getBubble_chartsEnumLiteralDeclaration_3());
+			}
+		)
+		    |
+		(
+			enumLiteral_4='Fisher_exact_test'
+			{
+				$current = grammarAccess.getCompStatsAccess().getFisher_exact_testEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_4, grammarAccess.getCompStatsAccess().getFisher_exact_testEnumLiteralDeclaration_4());
+			}
+		)
+		    |
+		(
+			enumLiteral_5='Shapiro_Wilk_correlation_test'
+			{
+				$current = grammarAccess.getCompStatsAccess().getShapiro_Wilk_correlation_testEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_5, grammarAccess.getCompStatsAccess().getShapiro_Wilk_correlation_testEnumLiteralDeclaration_5());
+			}
+		)
+		    |
+		(
+			enumLiteral_6='Pearson_correlation_test'
+			{
+				$current = grammarAccess.getCompStatsAccess().getPearson_correlation_testEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_6, grammarAccess.getCompStatsAccess().getPearson_correlation_testEnumLiteralDeclaration_6());
+			}
+		)
+		    |
+		(
+			enumLiteral_7='Spearman_correlation_test'
+			{
+				$current = grammarAccess.getCompStatsAccess().getSpearman_correlation_testEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_7, grammarAccess.getCompStatsAccess().getSpearman_correlation_testEnumLiteralDeclaration_7());
+			}
+		)
+	)
+;
+
+// Rule EvoStats
+ruleEvoStats returns [Enumerator current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			enumLiteral_0='Frequency_tables'
+			{
+				$current = grammarAccess.getEvoStatsAccess().getFrequency_tablesEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getEvoStatsAccess().getFrequency_tablesEnumLiteralDeclaration_0());
+			}
+		)
+		    |
+		(
+			enumLiteral_1='Evolution_plots'
+			{
+				$current = grammarAccess.getEvoStatsAccess().getEvolution_plotsEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getEvoStatsAccess().getEvolution_plotsEnumLiteralDeclaration_1());
 			}
 		)
 	)

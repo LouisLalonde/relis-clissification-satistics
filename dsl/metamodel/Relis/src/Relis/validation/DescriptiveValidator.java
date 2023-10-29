@@ -4,6 +4,9 @@
  */
 package Relis.validation;
 
+import Relis.DescStats;
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * A sample validator interface for {@link Relis.Descriptive}.
@@ -13,5 +16,9 @@ package Relis.validation;
  */
 public interface DescriptiveValidator {
 	boolean validate();
+
+	boolean validateStats(EList<DescStats> value);
+
+	boolean validateStats(DescStats value);
 
 }

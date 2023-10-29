@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link Relis.Variable#getStatistic <em>Statistic</em>}</li>
  *   <li>{@link Relis.Variable#getName <em>Name</em>}</li>
+ *   <li>{@link Relis.Variable#getType <em>Type</em>}</li>
  * </ul>
  *
  * @see Relis.RelisPackage#getVariable()
@@ -57,5 +58,30 @@ public interface Variable extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * The literals are from the enumeration {@link Relis.Type}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Type</em>' attribute.
+	 * @see Relis.Type
+	 * @see #setType(Type)
+	 * @see Relis.RelisPackage#getVariable_Type()
+	 * @model unique="false" ordered="false"
+	 * @generated
+	 */
+	Type getType();
+
+	/**
+	 * Sets the value of the '{@link Relis.Variable#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see Relis.Type
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(Type value);
 
 } // Variable

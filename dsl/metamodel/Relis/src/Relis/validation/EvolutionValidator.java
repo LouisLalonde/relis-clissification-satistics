@@ -4,6 +4,9 @@
  */
 package Relis.validation;
 
+import Relis.EvoStats;
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * A sample validator interface for {@link Relis.Evolution}.
@@ -13,5 +16,9 @@ package Relis.validation;
  */
 public interface EvolutionValidator {
 	boolean validate();
+
+	boolean validateStats(EList<EvoStats> value);
+
+	boolean validateStats(EvoStats value);
 
 }

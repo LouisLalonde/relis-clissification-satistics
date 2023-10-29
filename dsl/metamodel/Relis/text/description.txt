@@ -13,19 +13,43 @@ Package Relis <geodes.sms.relis>
 
   Class Statistic
     Attribute name : EString
-    Attribute type : Type
 
   Class Descriptive -> Statistic
+    Attribute stats : DescStats<<0..*>>
 
   Class Comparative -> Statistic
+    Attribute stats : CompStats<<0..*>>
 
   Class Evolution -> Statistic
+    Attribute stats : EvoStats<<0..*>>
 
   Class Variable
     Reference statistic : Statistic<<0..*>>
     Attribute name : EString
+    Attribute type : Type
 
   Enum Type
     Literal Continuous = 0
     Literal Nominal = 1
     Literal Comparative = 2
+
+  Enum CompStats
+    Literal Frequency_tables = 0
+    Literal Stacked_bar_plots = 1
+    Literal Grouped_bar_plots = 2
+    Literal Bubble_charts = 3
+    Literal Fisher_exact_test = 4
+    Literal Shapiro_Wilk_correlation_test = 5
+    Literal Pearson_correlation_test = 6
+    Literal Spearman_correlation_test = 7
+
+  Enum EvoStats
+    Literal Frequency_tables = 0
+    Literal Evolution_plots = 1
+
+  Enum DescStats
+    Literal Frequency_tables = 0
+    Literal Bar_plots = 1
+    Literal Statistics = 2
+    Literal Box_plots = 3
+    Literal Violin_plots = 4

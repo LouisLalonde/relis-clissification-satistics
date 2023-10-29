@@ -4,6 +4,9 @@
  */
 package Relis.validation;
 
+import Relis.CompStats;
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * A sample validator interface for {@link Relis.Comparative}.
@@ -13,5 +16,9 @@ package Relis.validation;
  */
 public interface ComparativeValidator {
 	boolean validate();
+
+	boolean validateStats(EList<CompStats> value);
+
+	boolean validateStats(CompStats value);
 
 }

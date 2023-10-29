@@ -9,20 +9,47 @@
       <genEnumLiterals ecoreEnumLiteral="Relis.ecore#//Type/Nominal"/>
       <genEnumLiterals ecoreEnumLiteral="Relis.ecore#//Type/Comparative"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Relis.ecore#//CompStats">
+      <genEnumLiterals ecoreEnumLiteral="Relis.ecore#//CompStats/Frequency_tables"/>
+      <genEnumLiterals ecoreEnumLiteral="Relis.ecore#//CompStats/Stacked_bar_plots"/>
+      <genEnumLiterals ecoreEnumLiteral="Relis.ecore#//CompStats/Grouped_bar_plots"/>
+      <genEnumLiterals ecoreEnumLiteral="Relis.ecore#//CompStats/Bubble_charts"/>
+      <genEnumLiterals ecoreEnumLiteral="Relis.ecore#//CompStats/Fisher_exact_test"/>
+      <genEnumLiterals ecoreEnumLiteral="Relis.ecore#//CompStats/Shapiro_Wilk_correlation_test"/>
+      <genEnumLiterals ecoreEnumLiteral="Relis.ecore#//CompStats/Pearson_correlation_test"/>
+      <genEnumLiterals ecoreEnumLiteral="Relis.ecore#//CompStats/Spearman_correlation_test"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Relis.ecore#//EvoStats">
+      <genEnumLiterals ecoreEnumLiteral="Relis.ecore#//EvoStats/Frequency_tables"/>
+      <genEnumLiterals ecoreEnumLiteral="Relis.ecore#//EvoStats/Evolution_plots"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Relis.ecore#//DescStats">
+      <genEnumLiterals ecoreEnumLiteral="Relis.ecore#//DescStats/Frequency_tables"/>
+      <genEnumLiterals ecoreEnumLiteral="Relis.ecore#//DescStats/Bar_plots"/>
+      <genEnumLiterals ecoreEnumLiteral="Relis.ecore#//DescStats/Statistics"/>
+      <genEnumLiterals ecoreEnumLiteral="Relis.ecore#//DescStats/Box_plots"/>
+      <genEnumLiterals ecoreEnumLiteral="Relis.ecore#//DescStats/Violin_plots"/>
+    </genEnums>
     <genClasses ecoreClass="Relis.ecore#//RelisRoot">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Relis.ecore#//RelisRoot/variable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Relis.ecore#//RelisRoot/name"/>
     </genClasses>
     <genClasses image="false" ecoreClass="Relis.ecore#//Statistic">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Relis.ecore#//Statistic/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Relis.ecore#//Statistic/type"/>
     </genClasses>
-    <genClasses ecoreClass="Relis.ecore#//Descriptive"/>
-    <genClasses ecoreClass="Relis.ecore#//Comparative"/>
-    <genClasses ecoreClass="Relis.ecore#//Evolution"/>
+    <genClasses ecoreClass="Relis.ecore#//Descriptive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Relis.ecore#//Descriptive/stats"/>
+    </genClasses>
+    <genClasses ecoreClass="Relis.ecore#//Comparative">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Relis.ecore#//Comparative/stats"/>
+    </genClasses>
+    <genClasses ecoreClass="Relis.ecore#//Evolution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Relis.ecore#//Evolution/stats"/>
+    </genClasses>
     <genClasses ecoreClass="Relis.ecore#//Variable">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Relis.ecore#//Variable/statistic"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Relis.ecore#//Variable/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Relis.ecore#//Variable/type"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

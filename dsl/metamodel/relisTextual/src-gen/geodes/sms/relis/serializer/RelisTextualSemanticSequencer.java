@@ -61,7 +61,7 @@ public class RelisTextualSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     Comparative returns Comparative
 	 *
 	 * Constraint:
-	 *     (name=EString type=Type?)
+	 *     (stats+=CompStats stats+=CompStats*)?
 	 * </pre>
 	 */
 	protected void sequence_Comparative(ISerializationContext context, Comparative semanticObject) {
@@ -76,7 +76,7 @@ public class RelisTextualSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     Descriptive returns Descriptive
 	 *
 	 * Constraint:
-	 *     (name=EString type=Type?)
+	 *     (stats+=DescStats stats+=DescStats*)?
 	 * </pre>
 	 */
 	protected void sequence_Descriptive(ISerializationContext context, Descriptive semanticObject) {
@@ -91,7 +91,7 @@ public class RelisTextualSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     Evolution returns Evolution
 	 *
 	 * Constraint:
-	 *     (name=EString type=Type?)
+	 *     (stats+=EvoStats stats+=EvoStats*)?
 	 * </pre>
 	 */
 	protected void sequence_Evolution(ISerializationContext context, Evolution semanticObject) {
@@ -119,7 +119,7 @@ public class RelisTextualSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     Variable returns Variable
 	 *
 	 * Constraint:
-	 *     (name=EString (statistic+=Statistic statistic+=Statistic*)?)
+	 *     (name=EString type=Type (statistic+=Statistic statistic+=Statistic*)?)
 	 * </pre>
 	 */
 	protected void sequence_Variable(ISerializationContext context, Variable semanticObject) {

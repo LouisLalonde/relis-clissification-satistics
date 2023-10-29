@@ -77,6 +77,12 @@ public class RelisFactoryImpl extends EFactoryImpl implements RelisFactory {
 		switch (eDataType.getClassifierID()) {
 			case RelisPackage.TYPE:
 				return createTypeFromString(eDataType, initialValue);
+			case RelisPackage.COMP_STATS:
+				return createCompStatsFromString(eDataType, initialValue);
+			case RelisPackage.EVO_STATS:
+				return createEvoStatsFromString(eDataType, initialValue);
+			case RelisPackage.DESC_STATS:
+				return createDescStatsFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -92,6 +98,12 @@ public class RelisFactoryImpl extends EFactoryImpl implements RelisFactory {
 		switch (eDataType.getClassifierID()) {
 			case RelisPackage.TYPE:
 				return convertTypeToString(eDataType, instanceValue);
+			case RelisPackage.COMP_STATS:
+				return convertCompStatsToString(eDataType, instanceValue);
+			case RelisPackage.EVO_STATS:
+				return convertEvoStatsToString(eDataType, instanceValue);
+			case RelisPackage.DESC_STATS:
+				return convertDescStatsToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -169,6 +181,66 @@ public class RelisFactoryImpl extends EFactoryImpl implements RelisFactory {
 	 * @generated
 	 */
 	public String convertTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CompStats createCompStatsFromString(EDataType eDataType, String initialValue) {
+		CompStats result = CompStats.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertCompStatsToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EvoStats createEvoStatsFromString(EDataType eDataType, String initialValue) {
+		EvoStats result = EvoStats.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEvoStatsToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DescStats createDescStatsFromString(EDataType eDataType, String initialValue) {
+		DescStats result = DescStats.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertDescStatsToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

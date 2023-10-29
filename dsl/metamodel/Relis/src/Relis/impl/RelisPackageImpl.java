@@ -2,8 +2,11 @@
  */
 package Relis.impl;
 
+import Relis.CompStats;
 import Relis.Comparative;
+import Relis.DescStats;
 import Relis.Descriptive;
+import Relis.EvoStats;
 import Relis.Evolution;
 import Relis.RelisFactory;
 import Relis.RelisPackage;
@@ -75,6 +78,27 @@ public class RelisPackageImpl extends EPackageImpl implements RelisPackage {
 	 * @generated
 	 */
 	private EEnum typeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum compStatsEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum evoStatsEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum descStatsEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -192,8 +216,8 @@ public class RelisPackageImpl extends EPackageImpl implements RelisPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getStatistic_Type() {
-		return (EAttribute)statisticEClass.getEStructuralFeatures().get(1);
+	public EClass getDescriptive() {
+		return descriptiveEClass;
 	}
 
 	/**
@@ -202,8 +226,8 @@ public class RelisPackageImpl extends EPackageImpl implements RelisPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getDescriptive() {
-		return descriptiveEClass;
+	public EAttribute getDescriptive_Stats() {
+		return (EAttribute)descriptiveEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -222,8 +246,28 @@ public class RelisPackageImpl extends EPackageImpl implements RelisPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getComparative_Stats() {
+		return (EAttribute)comparativeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getEvolution() {
 		return evolutionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEvolution_Stats() {
+		return (EAttribute)evolutionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -262,8 +306,48 @@ public class RelisPackageImpl extends EPackageImpl implements RelisPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getVariable_Type() {
+		return (EAttribute)variableEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getType() {
 		return typeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getCompStats() {
+		return compStatsEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getEvoStats() {
+		return evoStatsEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getDescStats() {
+		return descStatsEEnum;
 	}
 
 	/**
@@ -301,20 +385,26 @@ public class RelisPackageImpl extends EPackageImpl implements RelisPackage {
 
 		statisticEClass = createEClass(STATISTIC);
 		createEAttribute(statisticEClass, STATISTIC__NAME);
-		createEAttribute(statisticEClass, STATISTIC__TYPE);
 
 		descriptiveEClass = createEClass(DESCRIPTIVE);
+		createEAttribute(descriptiveEClass, DESCRIPTIVE__STATS);
 
 		comparativeEClass = createEClass(COMPARATIVE);
+		createEAttribute(comparativeEClass, COMPARATIVE__STATS);
 
 		evolutionEClass = createEClass(EVOLUTION);
+		createEAttribute(evolutionEClass, EVOLUTION__STATS);
 
 		variableEClass = createEClass(VARIABLE);
 		createEReference(variableEClass, VARIABLE__STATISTIC);
 		createEAttribute(variableEClass, VARIABLE__NAME);
+		createEAttribute(variableEClass, VARIABLE__TYPE);
 
 		// Create enums
 		typeEEnum = createEEnum(TYPE);
+		compStatsEEnum = createEEnum(COMP_STATS);
+		evoStatsEEnum = createEEnum(EVO_STATS);
+		descStatsEEnum = createEEnum(DESC_STATS);
 	}
 
 	/**
@@ -356,23 +446,47 @@ public class RelisPackageImpl extends EPackageImpl implements RelisPackage {
 
 		initEClass(statisticEClass, Statistic.class, "Statistic", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStatistic_Name(), ecorePackage.getEString(), "name", null, 0, 1, Statistic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStatistic_Type(), this.getType(), "type", null, 0, 1, Statistic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(descriptiveEClass, Descriptive.class, "Descriptive", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDescriptive_Stats(), this.getDescStats(), "stats", null, 0, -1, Descriptive.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(comparativeEClass, Comparative.class, "Comparative", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getComparative_Stats(), this.getCompStats(), "stats", null, 0, -1, Comparative.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(evolutionEClass, Evolution.class, "Evolution", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEvolution_Stats(), this.getEvoStats(), "stats", null, 0, -1, Evolution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVariable_Statistic(), this.getStatistic(), null, "statistic", null, 0, -1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVariable_Name(), ecorePackage.getEString(), "name", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVariable_Type(), this.getType(), "type", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(typeEEnum, Type.class, "Type");
 		addEEnumLiteral(typeEEnum, Type.CONTINUOUS);
 		addEEnumLiteral(typeEEnum, Type.NOMINAL);
 		addEEnumLiteral(typeEEnum, Type.COMPARATIVE);
+
+		initEEnum(compStatsEEnum, CompStats.class, "CompStats");
+		addEEnumLiteral(compStatsEEnum, CompStats.FREQUENCY_TABLES);
+		addEEnumLiteral(compStatsEEnum, CompStats.STACKED_BAR_PLOTS);
+		addEEnumLiteral(compStatsEEnum, CompStats.GROUPED_BAR_PLOTS);
+		addEEnumLiteral(compStatsEEnum, CompStats.BUBBLE_CHARTS);
+		addEEnumLiteral(compStatsEEnum, CompStats.FISHER_EXACT_TEST);
+		addEEnumLiteral(compStatsEEnum, CompStats.SHAPIRO_WILK_CORRELATION_TEST);
+		addEEnumLiteral(compStatsEEnum, CompStats.PEARSON_CORRELATION_TEST);
+		addEEnumLiteral(compStatsEEnum, CompStats.SPEARMAN_CORRELATION_TEST);
+
+		initEEnum(evoStatsEEnum, EvoStats.class, "EvoStats");
+		addEEnumLiteral(evoStatsEEnum, EvoStats.FREQUENCY_TABLES);
+		addEEnumLiteral(evoStatsEEnum, EvoStats.EVOLUTION_PLOTS);
+
+		initEEnum(descStatsEEnum, DescStats.class, "DescStats");
+		addEEnumLiteral(descStatsEEnum, DescStats.FREQUENCY_TABLES);
+		addEEnumLiteral(descStatsEEnum, DescStats.BAR_PLOTS);
+		addEEnumLiteral(descStatsEEnum, DescStats.STATISTICS);
+		addEEnumLiteral(descStatsEEnum, DescStats.BOX_PLOTS);
+		addEEnumLiteral(descStatsEEnum, DescStats.VIOLIN_PLOTS);
 
 		// Create resource
 		createResource(eNS_URI);
