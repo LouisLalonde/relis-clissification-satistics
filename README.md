@@ -1,6 +1,6 @@
 # relis-statistical-classification
 
-## Overview
+## 🔍 Overview
 
 This repository extends the basic statistical classification capabilities of *ReLiS*: a tool for conducting systematic reviews, develop by the [GEODES](https://geodes.iro.umontreal.ca/) software engineering group at the [University of Montreal](https://www.umontreal.ca/en/).
 
