@@ -25,11 +25,11 @@ These protocol models are then used to automatically generate Python code. When 
 
 | Statistics category | Name | Variable type | Description | Migrated to Python |
 |----|----|----|----|----|
-| ``Descriptive`` | Frequency tables | Nominal | | No |
-| `Descriptive` | Bar plots | Nominal | | No |
-| `Descriptive` | Statistics | Continuous | | No |
-| `Descriptive` | Box plots | Continuous | | No |
-| `Descriptive` | Violin plots | Continuous | | No |
+| ``Descriptive`` | Frequency tables | Nominal | | Yes |
+| `Descriptive` | Bar plots | Nominal | | Yes |
+| `Descriptive` | Statistics | Continuous | | Yes |
+| `Descriptive` | Box plots | Continuous | | Yes |
+| `Descriptive` | Violin plots | Continuous | | Yes |
 | `Evolution` | Frequency tables | Nominal | | No |
 | `Evolution` | Evolution plots | Nominal | | No |
 | ``Comparative`` | Frequency tables | Nominal | | No |
