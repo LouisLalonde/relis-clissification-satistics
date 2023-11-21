@@ -30,8 +30,8 @@ These protocol models are then used to automatically generate Python code. When 
 | `Descriptive` | Statistics | Continuous | | Yes |
 | `Descriptive` | Box plots | Continuous | | Yes |
 | `Descriptive` | Violin plots | Continuous | | Yes |
-| `Evolution` | Frequency tables | Nominal | | No |
-| `Evolution` | Evolution plots | Nominal | | No |
+| `Evolution` | Frequency tables | Nominal | | Yes |
+| `Evolution` | Evolution plots | Nominal | | Yes |
 | ``Comparative`` | Frequency tables | Nominal | | No |
 | `Comparative` | Stacked bar plots | Nominal | | No |
 | `Comparative` | Grouped bar plots | Nominal | | No |
