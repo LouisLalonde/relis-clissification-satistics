@@ -11,10 +11,9 @@ These protocol models are then used to automatically generate Python code. When 
 
 ## 🚀 Roadmap 
 - [x] DSL metamodel with ecore
-- [ ] DSL grammar with xtext
-- [ ] DSL *ReLIS* project classification variables injector
-- [ ] R statisctics functions migration to Python
-- [ ] DSL statistics code generation to python with xtend
+- [x] *ReLIS* database project classfication data extraction  
+- [ ] R statistic functions migration to Python
+- [ ] Python statistic functions autogeneration from TWIG templates
 
 ## 📜 Supported statistical function by categories
 
