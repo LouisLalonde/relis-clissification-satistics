@@ -31,11 +31,11 @@ These protocol models are then used to automatically generate Python code. When 
 | `Descriptive` | Violin plots | Continuous | | Yes |
 | `Evolution` | Frequency tables | Nominal | | Yes |
 | `Evolution` | Evolution plots | Nominal | | Yes |
-| ``Comparative`` | Frequency tables | Nominal | | No |
-| `Comparative` | Stacked bar plots | Nominal | | No |
-| `Comparative` | Grouped bar plots | Nominal | | No |
-| `Comparative` | Bubble charts | Nominal | | No |
-| `Comparative` | Fisher's exact test | Nominal | | No |
-| `Comparative` | Shapiro Wilk's correlation test | Continuous | | No |
-| `Comparative` | Pearson's correlation test | Continuous | | No |
-| `Comparative` | Spearman's correlation test | Continuous | | No |
+| ``Comparative`` | Frequency tables | Nominal | | Yes |
+| `Comparative` | Stacked bar plots | Nominal | | Yes |
+| `Comparative` | Grouped bar plots | Nominal | | Yes |
+| `Comparative` | Bubble charts | Nominal | | Yes |
+| `Comparative` | Fisher's exact test | Nominal | | Yes |
+| `Comparative` | Shapiro Wilk's correlation test | Continuous | | Yes |
+| `Comparative` | Pearson's correlation test | Continuous | | Yes |
+| `Comparative` | Spearman's correlation test | Continuous | | Yes |
