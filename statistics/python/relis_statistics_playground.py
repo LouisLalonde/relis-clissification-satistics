@@ -1,0 +1,5 @@
+from relis_statistics_lib import NominalVariables, ContinuousVariables, desc_distr_vector, bar_plot_vector
+
+desc_distr_vector[NominalVariables.industrial]
+
+bar_plot_vector[NominalVariables.industrial]
