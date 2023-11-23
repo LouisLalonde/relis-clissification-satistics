@@ -142,8 +142,7 @@ desc_distr_vector = {NominalVariables[field_name]: beautify_data_desc(field_name
 def generate_bar_plot(field_name: str, data: pd.DataFrame):
     df = beautify_data_desc(field_name, data)
     
-    if (len(df) == 0):
-        return
+    if (len(df) == 0): return
 
     # Set the theme
     sns.set_theme(style="whitegrid")
@@ -173,8 +172,7 @@ def generate_statistics(field_name: str, data: pd.DataFrame):
     
     series.replace('', np.nan, inplace=True)
     
-    if (len(data) == 0):
-        return
+    if (len(data) == 0): return
 
     nan_policy = 'omit' if Policies.DROPNA.value else 'propagate'
     results = {
