@@ -13,6 +13,8 @@ from scipy.stats import kurtosis, skew, shapiro, spearmanr, pearsonr
 
 ### Config
 
+plt.rcParams['figure.max_open_warning'] = 0
+
 class Multivalue(Enum):
     SEPARATOR = '|'
 
@@ -68,9 +70,14 @@ def removeEmptyStrings(df: pd.DataFrame):
 def get_variable(field_name: str, variables) -> Variable:
     return variables[field_name].value
 
-def process_splitted_values(values: pd.Series, multiple: bool):
+def split_multiple_values(value):
+    if not pd.isna(value):
+        return [item.strip() for item in re.split(rf'\{Multivalue.SEPARATOR.value}', value)] 
+    return [value]
+
+def process_multiple_values(values: pd.Series, multiple: bool):
     if (multiple):
-        return values.apply(lambda x: [item.strip() for item in re.split(rf'\{Multivalue.SEPARATOR.value}', x)])
+        return values.apply(lambda x: split_multiple_values(x))
 
     return values.apply(lambda x: [x])
 
@@ -113,7 +120,7 @@ def beautify_data_desc(field_name: str, data: pd.DataFrame):
     variable = get_variable(field_name, NominalVariables)
 
     # Split the values by the "|" character and flatten the result
-    split_values = process_splitted_values(data[field_name], variable.multiple)
+    split_values = process_multiple_values(data[field_name], variable.multiple)
     flattened_values = np.concatenate(split_values)
 
     # Generate the frequency table
@@ -248,7 +255,7 @@ def beautify_data_evo(field_name: str, publication_year: pd.Series, variable: Va
     # Create new DataFrame with specified columns
     subset_data = pd.DataFrame({
         'Year': publication_year,
-        'Value': process_splitted_values(series, variable.multiple)
+        'Value': process_multiple_values(series, variable.multiple)
     })
     
     subset_data = subset_data.explode('Value')
@@ -314,10 +321,10 @@ def beautify_data_comp(field_name: str, dependency_field_name: str,
     subset_data = subset_data[(subset_data[field_name] != "") & (subset_data[dependency_field_name] != "")]
 
     # Splitting the strings and expanding into separate rows
-    subset_data[field_name] = process_splitted_values(subset_data[field_name], variable.multiple)
+    subset_data[field_name] = process_multiple_values(subset_data[field_name], variable.multiple)
     subset_data = subset_data.explode(field_name)
 
-    subset_data[dependency_field_name] = process_splitted_values(subset_data[dependency_field_name],
+    subset_data[dependency_field_name] = process_multiple_values(subset_data[dependency_field_name],
                                                                   dependency_variable.multiple)
     subset_data = subset_data.explode(dependency_field_name)
 
