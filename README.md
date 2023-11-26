@@ -19,7 +19,7 @@ These protocol models are then used to automatically generate Python code. When 
 - [x] DSL metamodel with ecore
 - [x] *ReLIS* database project classfication data extraction  
 - [x] R statistic functions migration to Python
-- [ ] Python executable artifacts autogeneration from TWIG templates
+- [ ] Python executable artifacts autogeneration from [Twig](https://twig.symfony.com/) templates
 
 ## 📜 Supported statistical function by categories
 
