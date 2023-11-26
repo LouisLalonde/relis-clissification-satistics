@@ -1,6 +1,6 @@
 import json
 
-with open('../data/relis_classification_CV.json', 'r', encoding='utf8') as f:
+with open('../../data/relis_classification_CV.json', 'r', encoding='utf8') as f:
    data =  json.loads(f.read())
 
 # Define the attribute type mapping
