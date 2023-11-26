@@ -12,13 +12,14 @@ These protocol models are then used to automatically generate Python code. When 
 ## Repositories
 
 - [DSL](https://github.com/LouisLalonde/relis-statistical-classification)
+- [Statistical-Templates](https://github.com/LouisLalonde/relis-statistical-templates)
 - [Classifiers-Injector](https://github.com/LouisLalonde/relis-classifiers-injector)
 
 ## 🚀 Roadmap 
 - [x] DSL metamodel with ecore
 - [x] *ReLIS* database project classfication data extraction  
-- [ ] R statistic functions migration to Python
-- [ ] Python statistic functions autogeneration from TWIG templates
+- [x] R statistic functions migration to Python
+- [ ] Python executable artifacts autogeneration from TWIG templates
 
 ## 📜 Supported statistical function by categories
 
