@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RelisStatisticalClassification
+Bundle-SymbolicName: RelisStatisticalClassification
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: RelisStatisticalClassification
+Bundle-RequiredExecutionEnvironment: JavaSE-17

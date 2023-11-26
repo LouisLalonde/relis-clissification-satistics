@@ -9,6 +9,11 @@ These protocol models are then used to automatically generate Python code. When 
 
 **Primary authors:** Louis Lalonde [@louislalonde](https://github.com/LouisLalonde) and Hanz Schepens [@Wickkawizz](https://github.com/Wickkawizz)
 
+## Repositories
+
+- [DSL](https://github.com/LouisLalonde/relis-statistical-classification)
+- [Classifiers-Injector](https://github.com/LouisLalonde/relis-classifiers-injector)
+
 ## 🚀 Roadmap 
 - [x] DSL metamodel with ecore
 - [x] *ReLIS* database project classfication data extraction  
