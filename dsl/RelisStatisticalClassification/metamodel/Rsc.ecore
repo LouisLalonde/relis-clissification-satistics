@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Rsc" nsURI="geodes.sms.rsc" nsPrefix="rsc">
   <eClassifiers xsi:type="ecore:EClass" name="Project">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"
         eType="#//Variable" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
@@ -10,17 +10,18 @@
   <eClassifiers xsi:type="ecore:EClass" name="Statistic" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="return_data_type" eType="#//ReturnDataType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Descriptive" eSuperTypes="#//Statistic">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stats" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="statistics" upperBound="-1"
         eType="#//DescStats"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Comparative" eSuperTypes="#//Statistic">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stats" upperBound="-1"
-        eType="#//CompStats"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="statistics" upperBound="-1"
+        eType="#//CompStats" defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Evolution" eSuperTypes="#//Statistic">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stats" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="statistics" upperBound="-1"
         eType="#//EvoStats"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Type">
@@ -28,7 +29,7 @@
     <eLiterals name="Nominal" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Variable">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="statistic" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statistics" upperBound="-1"
         eType="#//Statistic" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
@@ -57,5 +58,9 @@
     <eLiterals name="Statistics" value="2"/>
     <eLiterals name="Box_plots" value="3"/>
     <eLiterals name="Violin_plots" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ReturnDataType">
+    <eLiterals name="Figure"/>
+    <eLiterals name="DataFrame"/>
   </eClassifiers>
 </ecore:EPackage>
