@@ -7,15 +7,15 @@ This repository extends the basic statistical classification capabilities of *[R
 It provides to the users a comprehensive Python environment to performs the statistical analysis of their *ReLiS* SR project classification data. 
 
 It uses a *Domain Specific Modeling* approach (DSM), including a *Domain specific language* (DSL), to generate models from the *SR* project classification data.
-These models are then used to automatically generate the executable artifacts of the Python environment.
+These models are then used to automatically generate the executable artifacts used in the Python environment.
 
 **Primary authors:** Louis Lalonde [@louislalonde](https://github.com/LouisLalonde) and Hanz Schepens [@Wickkawizz](https://github.com/Wickkawizz)
 
 ## Repositories
 
-- [DSL](https://github.com/LouisLalonde/relis-statistical-classification)
-- [Environment](https://github.com/LouisLalonde/relis-statistical-templates)
-- [Classifiers-Injector](https://github.com/LouisLalonde/relis-classifiers-injector)
+- <a href="https://github.com/LouisLalonde/relis-statistical-classification" target="_blank">DSL</a>
+- <a href="https://github.com/LouisLalonde/relis-statistical-templates" target="_blank">Environment</a>
+- <a href="https://github.com/LouisLalonde/relis-classifiers-injector" target="_blank">Classifiers-Injector</a>
 
 ## 🚀 Roadmap 
 - [x] DSL metamodel with ecore
