@@ -121,7 +121,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_Kv-kAYvxEe61UKemGk1MzA"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_Kv-kAovxEe61UKemGk1MzA" type="3001">
-        <element xmi:type="ecore:EAttribute" href="Rsc.ecore#//Variable/type"/>
+        <element xmi:type="ecore:EAttribute" href="Rsc.ecore#//Variable/dataType"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_Kv-kA4vxEe61UKemGk1MzA"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_eoNSsIvxEe61UKemGk1MzA" type="3001">
@@ -144,7 +144,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_Kv2BMYvxEe61UKemGk1MzA"/>
     </children>
     <element xmi:type="ecore:EClass" href="Rsc.ecore#//Variable"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Kv2BJ4vxEe61UKemGk1MzA" x="233" y="264"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Kv2BJ4vxEe61UKemGk1MzA" x="228" y="264"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_Kv2BMovxEe61UKemGk1MzA" type="2005" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_Kv2BNIvxEe61UKemGk1MzA" type="5005"/>
