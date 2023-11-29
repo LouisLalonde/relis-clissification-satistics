@@ -10,7 +10,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Statistic" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="return_data_type" eType="#//ReturnDataType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataType" eType="#//DataType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="returnDataType" eType="#//ReturnDataType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Descriptive" eSuperTypes="#//Statistic">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="statistics" upperBound="-1"
@@ -24,7 +25,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="statistics" upperBound="-1"
         eType="#//EvoStats"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Type">
+  <eClassifiers xsi:type="ecore:EEnum" name="DataType">
     <eLiterals name="Continuous"/>
     <eLiterals name="Nominal" value="1"/>
   </eClassifiers>
@@ -34,30 +35,30 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false" unique="false"
-        eType="#//Type"/>
+        eType="#//DataType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiple" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="CompStats">
-    <eLiterals name="Frequency_tables"/>
-    <eLiterals name="Stacked_bar_plots" value="1"/>
-    <eLiterals name="Grouped_bar_plots" value="2"/>
-    <eLiterals name="Bubble_charts" value="3"/>
-    <eLiterals name="Fisher_exact_test" value="4"/>
-    <eLiterals name="Shapiro_Wilk_correlation_test" value="5"/>
-    <eLiterals name="Pearson_correlation_test" value="6"/>
-    <eLiterals name="Spearman_correlation_test" value="7"/>
+    <eLiterals name="FrequencyTables"/>
+    <eLiterals name="StackedBarPlots" value="1"/>
+    <eLiterals name="GroupedBarPlots" value="2"/>
+    <eLiterals name="BubbleCharts" value="3"/>
+    <eLiterals name="ChiSquaredTest" value="4"/>
+    <eLiterals name="ShapiroWilkCorrelationTest" value="5"/>
+    <eLiterals name="PearsonCorrelationTest" value="6"/>
+    <eLiterals name="SpearmanCorrelationTest" value="7"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EvoStats">
-    <eLiterals name="Frequency_tables"/>
-    <eLiterals name="Evolution_plots" value="1"/>
+    <eLiterals name="FrequencyTables"/>
+    <eLiterals name="EvolutionPlots" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DescStats">
-    <eLiterals name="Frequency_tables"/>
-    <eLiterals name="Bar_plots" value="1"/>
+    <eLiterals name="FrequencyTables"/>
+    <eLiterals name="BarPlots" value="1"/>
     <eLiterals name="Statistics" value="2"/>
-    <eLiterals name="Box_plots" value="3"/>
-    <eLiterals name="Violin_plots" value="4"/>
+    <eLiterals name="BoxPlots" value="3"/>
+    <eLiterals name="ViolinPlots" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ReturnDataType">
     <eLiterals name="Figure"/>
