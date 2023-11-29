@@ -12,7 +12,7 @@ These protocol models are then used to automatically generate Python code. When 
 ## Repositories
 
 - [DSL](https://github.com/LouisLalonde/relis-statistical-classification)
-- [Statistical-Templates](https://github.com/LouisLalonde/relis-statistical-templates)
+- [Environment](https://github.com/LouisLalonde/relis-statistical-templates)
 - [Classifiers-Injector](https://github.com/LouisLalonde/relis-classifiers-injector)
 
 ## 🚀 Roadmap 
