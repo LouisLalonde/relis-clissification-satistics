@@ -38,7 +38,7 @@ These models are then used to automatically generate the executable artifacts us
 | `Comparative` | Stacked bar plots | Nominal | Yes |
 | `Comparative` | Grouped bar plots | Nominal | Yes |
 | `Comparative` | Bubble charts | Nominal | Yes |
-| `Comparative` | Fisher's exact test | Nominal | Yes |
+| `Comparative` | Chi-squared test | Nominal | Yes |
 | `Comparative` | Shapiro Wilk's correlation test | Continuous | Yes |
 | `Comparative` | Pearson's correlation test | Continuous | Yes |
 | `Comparative` | Spearman's correlation test | Continuous | Yes |
