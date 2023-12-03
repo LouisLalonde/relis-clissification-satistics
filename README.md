@@ -1,4 +1,4 @@
-# relis-statistical-classification
+# relis-statistical-classification-dsl
 
 ## 🔍 Overview
 
