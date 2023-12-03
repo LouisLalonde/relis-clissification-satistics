@@ -1,12 +1,12 @@
-# relis-statistical-classification-dsl
+# relis-statistical-analysis-dsl
 
 ## 🔍 Overview
 
-This repository extends the basic statistical classification capabilities of *[ReLiS](https://github.com/geodes-sms/relis)* : a tool for conducting systematic reviews, develop by the [GEODES](https://geodes.iro.umontreal.ca/) software engineering group at the [University of Montreal](https://www.umontreal.ca/en/).
+This repository extends the statistical analysis capabilities of *[ReLiS](https://github.com/geodes-sms/relis)* : a tool for conducting systematic reviews, develop by the [GEODES](https://geodes.iro.umontreal.ca/) software engineering group at the [University of Montreal](https://www.umontreal.ca/en/).
 
 It provides to the users a comprehensive Python environment to performs the statistical analysis of their *ReLiS* SR project classification data. 
 
-It uses a *Domain Specific Modeling* approach (DSM), including a *Domain specific language* (DSL), to generate models from the *SR* project classification data.
+It uses a *Domain Specific Modeling* approach (DSM), including a *Domain specific language* (DSL), to generate statistical analysis models from the *SR* project classification data.
 These models are then used to automatically generate the executable artifacts used in the Python environment.
 
 **Primary authors:** Louis Lalonde [@louislalonde](https://github.com/LouisLalonde) and Hanz Schepens [@Wickkawizz](https://github.com/Wickkawizz)
@@ -19,9 +19,9 @@ These models are then used to automatically generate the executable artifacts us
 
 ## 🚀 Roadmap 
 - [x] DSL metamodel with ecore
-- [x] *ReLIS* project classification data modelization (from database)
-- [x] R statistic functions migration to Python
-- [x] Python executable artifacts autogeneration with TWIG templates
+- [x] *ReLIS* project statistical analysis modelization (from database)
+- [x] R statistical functions migration to Python
+- [x] Python artifacts autogeneration from TWIG templates
 
 ## 📜 Supported statistical functions by categories
 
