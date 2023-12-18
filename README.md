@@ -21,7 +21,7 @@ These models are then used to automatically generate the executable artifacts us
 - [x] DSL metamodel with ecore
 - [x] *ReLIS* project statistical analysis modelization (from database)
 - [x] R statistical functions migration to Python
-- [x] Python artifacts autogeneration from TWIG templates
+- [x] Template-based Python artifact generation
 
 ## 📜 Supported statistical functions by categories
 
