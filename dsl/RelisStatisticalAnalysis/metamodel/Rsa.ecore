@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Rsc" nsURI="geodes.sms.rsc" nsPrefix="rsc">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Rsa" nsURI="geodes.sms.rsa" nsPrefix="rsa">
   <eClassifiers xsi:type="ecore:EClass" name="Project">
     <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"
         eType="#//Variable" containment="true"/>
@@ -8,7 +8,7 @@
         iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Statistic" abstract="true" eSuperTypes="#//EntityDefinition">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="returnDataType" eType="#//ReturnDataType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="returnDataType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Descriptive" eSuperTypes="#//Statistic">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="statistics" upperBound="-1"
@@ -21,10 +21,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Evolution" eSuperTypes="#//Statistic">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="statistics" upperBound="-1"
         eType="#//EvoStats"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="DataType">
-    <eLiterals name="Continuous"/>
-    <eLiterals name="Nominal" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//EntityDefinition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="statistics" upperBound="-1"
@@ -52,14 +48,10 @@
     <eLiterals name="BoxPlots" value="3"/>
     <eLiterals name="ViolinPlots" value="4"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="ReturnDataType">
-    <eLiterals name="Figure"/>
-    <eLiterals name="DataFrame"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EntityDefinition" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataType" eType="#//DataType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataType"/>
   </eClassifiers>
 </ecore:EPackage>

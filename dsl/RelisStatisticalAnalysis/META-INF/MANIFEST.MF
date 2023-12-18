@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RelisStatisticalAnalysis
+Bundle-SymbolicName: RelisStatisticalAnalysis
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: RelisStatisticalAnalysis
+Bundle-RequiredExecutionEnvironment: JavaSE-17

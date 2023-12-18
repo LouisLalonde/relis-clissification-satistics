@@ -161,6 +161,6 @@ cython_debug/
 
 # DSL
 dsl/runtime-EclipseApplication/
-dsl/metamodel/RelisStatisticalClassification/metamodel/Relis.emf
+dsl/metamodel/RelisStatisticalAnalysis/metamodel/Relis.emf
 
 .vscode
