@@ -20,10 +20,6 @@
   <children xmi:type="notation:Shape" xmi:id="_Kv1aGovxEe61UKemGk1MzA" type="2001" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_Kv1aHIvxEe61UKemGk1MzA" type="5001"/>
     <children xmi:type="notation:BasicCompartment" xmi:id="_Kv1aHYvxEe61UKemGk1MzA" type="7001">
-      <children xmi:type="notation:Node" xmi:id="_oLAr8I7hEe6BjuHCVGrKCw" type="3001">
-        <element xmi:type="ecore:EAttribute" href="Rsa.ecore#//Statistic/returnDataType"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_oLAr8Y7hEe6BjuHCVGrKCw"/>
-      </children>
       <styles xmi:type="notation:SortingStyle" xmi:id="_Kv1aHovxEe61UKemGk1MzA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_Kv1aH4vxEe61UKemGk1MzA"/>
       <layoutConstraint xmi:type="notation:Ratio" xmi:id="_rpBD4I7hEe6BjuHCVGrKCw" value="0.4520547945205479"/>
@@ -180,6 +176,27 @@
     </children>
     <element xmi:type="ecore:EClass" href="Rsa.ecore#//EntityDefinition"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6e3skZFMEe6MO-Oik_y_9g" x="204" y="228" width="145" height="97"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_cKepIJ4SEe6DzIR3tAeHhg" type="2005" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_cKepIp4SEe6DzIR3tAeHhg" type="5005"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_cKepI54SEe6DzIR3tAeHhg" type="7011">
+      <children xmi:type="notation:Node" xmi:id="_ervsAJ4SEe6DzIR3tAeHhg" type="3009">
+        <element xmi:type="ecore:EEnumLiteral" href="Rsa.ecore#//DataType/Nominal"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ervsAZ4SEe6DzIR3tAeHhg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_faF_wJ4SEe6DzIR3tAeHhg" type="3009">
+        <element xmi:type="ecore:EEnumLiteral" href="Rsa.ecore#//DataType/Continuous"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_faF_wZ4SEe6DzIR3tAeHhg"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_cKepJJ4SEe6DzIR3tAeHhg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_cKepJZ4SEe6DzIR3tAeHhg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_cKepJp4SEe6DzIR3tAeHhg" type="7012">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_cKepJ54SEe6DzIR3tAeHhg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_cKepKJ4SEe6DzIR3tAeHhg"/>
+    </children>
+    <element xmi:type="ecore:EEnum" href="Rsa.ecore#//DataType"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cKepIZ4SEe6DzIR3tAeHhg" x="216" y="132" width="108"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_Ktf3wYvxEe61UKemGk1MzA"/>
   <element xmi:type="ecore:EPackage" href="Rsa.ecore#/"/>
